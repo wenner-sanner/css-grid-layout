@@ -1,0 +1,86 @@
+.container {
+    display: grid;
+    grid-template-columns: [inicio] 150px [f-primaria i-principal] 700px 
+                            [f-principal i-secundaria] 150px [fim];
+    grid-template-rows: [inicio] 60px [f-topo i-menu] 40px
+                        [f-menu i-row3] 200px [f-row3 i-footer] 60px [fim];
+    grid-gap: 5px 10px;
+    color: #fff;
+}
+
+header {
+    background: #0c6cda;
+    /* grid-column-start: inicio;
+    grid-column-end: fim;
+    grid-row-start: inicio;
+    grid-row-end: f-topo; */
+   
+    /* grid-column: inicio / fim;
+    grid-row: inicio / f-topo; */
+
+    /* grid-area: grs / gcs / gre / gce */
+    grid-area: inicio / inicio / f-topo / fim;
+}
+
+nav {
+    background: #f32d2d;
+    /* grid-column-start: inicio;
+    grid-column-end: fim;
+    grid-row-start: i-menu;
+    grid-row-end: f-menu; */
+
+    /* grid-column: inicio / fim;
+    grid-row: i-menu / f-menu; */
+
+    grid-area: i-menu / inicio / f-menu / fim;
+}
+
+main{
+    background: #10a831;
+    /* grid-column-start: i-principal;
+    grid-column-end: f-principal;
+    grid-row-start: i-row3;
+    grid-row-end: f-row3; */
+    
+    /* grid-column: i-principal / f-principal;
+    grid-row: i-row3 / f-row3; */
+
+    grid-area: i-row3 / i-principal / f-row3 / f-principal;
+}
+
+.primaria {
+    background: #da0cd0;
+    /* grid-column-start: inicio;
+    grid-column-end: f-primaria;        
+    grid-row-start: i-row3;
+    grid-row-end: f-row3; */
+  
+    /* grid-column: inicio / f-primaria;
+    grid-row: i-row3 / f-row3; */
+
+    grid-area: i-row3 / inicio / f-row3 / f-primaria;
+}
+
+.secundaria {
+    background: #b103f6;
+    /* grid-column-start: i-secundaria;
+    grid-column-end: fim;
+    grid-row-start: i-row3;
+    grid-row-end: f-row3; */
+   
+    /* grid-column: i-secundaria / fim;
+    grid-row: i-row3 / f-row3; */
+    grid-area: i-row3 / i-secundaria / f-row3 / fim;
+}
+
+footer {
+    background: #0e615a;
+    /* grid-column-start: inicio;
+    grid-column-end: fim;
+    grid-row-start: i-footer
+    grid-row-end: fim*/
+
+    /* grid-column: inicio / fim;
+    grid-row: i-footer / fim;*/
+    grid-area: i-footer / inicio / fim / fim;
+} 
